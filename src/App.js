@@ -7,7 +7,7 @@ function App() {
   return (
     <Box>
       <Header />
-      <Page />
+      <Page></Page>
     </Box>
   );
 }

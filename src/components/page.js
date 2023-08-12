@@ -1,6 +1,14 @@
-import { Image, Flex } from "@chakra-ui/react";
+import { Box, Image } from "@chakra-ui/react";
+import ApiData from "../components/apiData";
+
 import "../styles/App.css";
+import chuck from "../images/chucknorris.png";
 
 export default function Page() {
-  return <Flex bg="#212121" w="100%" h="9999px" color="white"></Flex>;
+  return (
+    <Box bg="#212121" w="100%" h="100vw" color="white">
+      <Image src={chuck} />
+      <ApiData />
+    </Box>
+  );
 }
