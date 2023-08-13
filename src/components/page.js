@@ -43,7 +43,13 @@ export default function Page() {
     }
   }
   return (
-    <Box bg="#212121" color="white" h="100vh" w="100%" justifyContent="center">
+    <Box
+      bg="#f1f1f1"
+      color="#212121"
+      h="100vh"
+      w="100%"
+      justifyContent="center"
+    >
       <Box justifyContent="center" mx="auto" px="50px" w="80%">
         <Box>
           <Text
@@ -61,6 +67,7 @@ export default function Page() {
         <Flex justifyContent="center" my="20px" gap="20px">
           <Select
             cursor="pointer"
+            borderColor="gray.300"
             w="180px"
             placeholder="Categories"
             bg="white"
@@ -77,12 +84,12 @@ export default function Page() {
           </Select>
           <Button
             border="1px"
-            borderColor="gray.200"
+            borderColor="gray.300"
             color="#131313"
             background="#F7FAFC"
             variant="solid"
             onClick={getJokeByCategory}
-            _hover={{ backgroundColor: "#888" }}
+            _hover={{ backgroundColor: "#bbb" }}
           >
             Jokes!
           </Button>
