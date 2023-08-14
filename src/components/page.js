@@ -29,19 +29,35 @@ export default function Page() {
     getCategories();
   }, []);
 
-  async function getJokeByCategory() {
+  useEffect(() => {
+    getJoke();
+  }, []);
+
+  async function getJoke() {
+    const response = await fetch(`https://api.chucknorris.io/jokes/random`);
+    const joke = await response.json();
+    setValue(joke.value);
+    setUrl(joke.url);
+    setShowContent(true);
+  }
+
+  async function getJokeByCategory(category) {
     try {
-      const response = await fetch(
-        `https://api.chucknorris.io/jokes/random?category=${selectedCategory}`
-      );
-      const data = await response.json();
-      const jokeValue = data.value;
-      const jokeUrl = data.url;
+      if (selectedCategory == "") {
+        getJoke();
+      } else {
+        const response = await fetch(
+          `https://api.chucknorris.io/jokes/random?category=${category}`
+        );
 
-      setValue(jokeValue);
-      setUrl(jokeUrl);
+        const data = await response.json();
+        const jokeValue = data.value;
+        const jokeUrl = data.url;
+        setValue(jokeValue);
+        setUrl(jokeUrl);
 
-      setShowContent(true);
+        setShowContent(true);
+      }
     } catch (error) {
       console.error("Error fetching joke by category:", error);
     }
@@ -79,18 +95,19 @@ export default function Page() {
                 borderRadius="30%"
               />
             </div>
-            {showContent && selectedCategory && (
-              <Box alignContent="center">
-                <Text className="joke" maxW="490px" py="20px">
-                  {value}
-                </Text>
+
+            <Box alignContent="center">
+              <Text className="joke" maxW="490px" py="20px">
+                {value}
+              </Text>
+              {showContent && selectedCategory && (
                 <Text className="category">
                   {"Categoria selecionada: " +
                     selectedCategory.charAt(0).toUpperCase() +
                     selectedCategory.slice(1)}
                 </Text>
-              </Box>
-            )}
+              )}
+            </Box>
           </Box>
         </Box>
         <Flex
@@ -107,7 +124,11 @@ export default function Page() {
             bg="white"
             color="black"
             value={selectedCategory}
-            onChange={(event) => setSelectedCategory(event.target.value)}
+            onChange={(event) => {
+              const selectedValue = event.target.value;
+              setSelectedCategory(selectedValue);
+              getJokeByCategory(selectedValue);
+            }}
             _hover={{ backgroundColor: "#E5E5E5" }}
           >
             {categories.map((category) => (
@@ -122,7 +143,7 @@ export default function Page() {
             color="#131313"
             background="#F7FAFC"
             variant="solid"
-            onClick={getJokeByCategory}
+            onClick={() => getJokeByCategory(selectedCategory)}
             _hover={{ backgroundColor: "#E5E5E5" }}
             disabled={!selectedCategory}
           >
