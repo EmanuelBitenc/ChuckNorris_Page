@@ -9,8 +9,7 @@ export default function Header() {
         alignItems="center"
         w="100%"
         justifyContent="space-between"
-        pr="60px"
-        pl="60px"
+        px="60px"
       >
         <Link href="https://emanuelbitenc.github.io/">
           <Image src={Logo} alt="Logo" w="120px" />

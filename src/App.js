@@ -5,7 +5,7 @@ import Page from "./components/page";
 
 function App() {
   return (
-    <Box>
+    <Box bg="#f1f1f1" h="100vh">
       <Header />
       <Page></Page>
     </Box>
