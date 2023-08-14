@@ -1,4 +1,5 @@
 # Página de Piadas do Chuck Norris
+- Funcioanndo em https://chuck-norris-page.vercel.app/
 
 Bem-vindo à Página de Piadas do Chuck Norris! Desenvolvida a partir da api Chuck Norris Jokes.
 
