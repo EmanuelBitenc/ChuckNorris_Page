@@ -3,14 +3,19 @@
   margin: 0px 40px;
 }
 
-.font {
+.lista {
   font-family: "Fira Sans", arial, sans-serif;
+  gap: 20px;
 }
 
 /* Jokes*/
 
 .joke {
   font-size: 1.5rem;
+}
+
+.icon {
+  display: none;
 }
 
 @media (max-width: 900px) {
@@ -43,9 +48,6 @@
     padding: 0px;
     margin: 0px 10px;
   }
-}
-
-@media (max-width: 600px) {
   .container {
     padding: 0px;
     margin: auto;
@@ -71,6 +73,12 @@
 }
 
 @media (max-width: 500px) {
+  .nav {
+    display: none;
+  }
+  .icon {
+    display: block;
+  }
   .titleChuck {
     font-size: 1.3rem;
     line-height: 30px;

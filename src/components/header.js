@@ -1,5 +1,7 @@
 import { Image, Flex, Link, ListItem, List } from "@chakra-ui/react";
 import Logo from "../images/LogoBitenc.svg";
+import github from "../images/icon/github.svg";
+import linkedin from "../images/icon/linkedin.svg";
 import "../styles/App.css";
 
 export default function Header() {
@@ -14,15 +16,25 @@ export default function Header() {
         <Link href="https://emanuelbitenc.github.io/">
           <Image src={Logo} alt="Logo" w="120px" />
         </Link>
-        <List display="flex" as="nav" className="font">
+        <List display="flex" as="nav" className="lista">
           <Link href="https://www.linkedin.com/in/emanuelbitencourt/">
             <ListItem className="nav" fontSize="lg">
               linkedin
+            </ListItem>
+            <ListItem className="nav_icon">
+              <div className="icon">
+                <Image src={linkedin} alt="Logo" w="30px" />
+              </div>
             </ListItem>
           </Link>
           <Link href="https://github.com/EmanuelBitenc">
             <ListItem className="nav" fontSize="lg">
               github
+            </ListItem>
+            <ListItem className="nav_icon">
+              <div className="icon">
+                <Image src={github} alt="Logo" w="30px" />
+              </div>
             </ListItem>
           </Link>
         </List>

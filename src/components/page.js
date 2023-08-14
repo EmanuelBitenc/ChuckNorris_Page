@@ -43,7 +43,7 @@ export default function Page() {
 
   async function getJokeByCategory(category) {
     try {
-      if (selectedCategory == "") {
+      if (selectedCategory === "") {
         getJoke();
       } else {
         const response = await fetch(
@@ -51,10 +51,8 @@ export default function Page() {
         );
 
         const data = await response.json();
-        const jokeValue = data.value;
-        const jokeUrl = data.url;
-        setValue(jokeValue);
-        setUrl(jokeUrl);
+        setValue(data.value);
+        setUrl(data.url);
 
         setShowContent(true);
       }
