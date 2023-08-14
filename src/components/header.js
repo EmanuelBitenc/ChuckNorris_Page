@@ -13,9 +13,7 @@ export default function Header() {
         justifyContent="space-between"
         px="60px"
       >
-        <Link href="https://emanuelbitenc.github.io/">
-          <Image src={Logo} alt="Logo" w="120px" />
-        </Link>
+        <Image src={Logo} alt="Logo" w="120px" />
         <List display="flex" as="nav" className="lista">
           <Link href="https://www.linkedin.com/in/emanuelbitencourt/">
             <ListItem className="nav" fontSize="lg">
