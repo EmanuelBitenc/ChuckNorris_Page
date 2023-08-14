@@ -20,11 +20,11 @@ Foi feito um filtro por categoria para que se pudesse escolher entre os diversos
 
 ## Estrutura do projeto
  Dentro da pasta src podemos encontrar:
- - Pasta `images`, responsavel por agrupar as imagens utilizadas no projeto.
- - Pasta `styles`, responsavel por agrupar os arquivos de estilo css.
- - Pasta `components`, responsavel por agrupar os componentes do projeto.
-  - `header.js` contem o código do cabeçario da pagina.
-  - `page.js` contem o código do restante da pagina, junto com o código que consume a api e trabalha com ela.
+ - Pasta `images` , responsavel por agrupar as imagens utilizadas no projeto.
+ - Pasta `styles` , responsavel por agrupar os arquivos de estilo css.
+ - Pasta `components` , responsavel por agrupar os componentes do projeto.
+  - `header.js` , contem o código do cabeçario da pagina.
+  - `page.js` , contem o código do restante da pagina, junto com o código que consume a api e trabalha com ela.
 
 <details><summary><b>Create React App</summary>
 
