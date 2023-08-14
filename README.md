@@ -1,10 +1,42 @@
 # Página de Piadas do Chuck Norris
 
-- Funcioanndo em https://chuck-norris-page.vercel.app/
-
-Bem-vindo à Página de Piadas do Chuck Norris! Desenvolvida a partir da api Chuck Norris Jokes.
+### Bem-vindo à Página de Piadas do Chuck Norris, desenvolvida a partir da api Chuck Norris Jokes.
 
 ![localhost_3000_ (1)](https://github.com/EmanuelBitenc/ChuckNorris_Page/assets/63247451/9746a5d1-1390-4534-b8fd-d2abb374d695)
+
+- Funcionando em https://chuck-norris-page.vercel.app/
+
+<details><summary><b>Como Executar o Projeto</summary>
+
+## Como Executar o Projeto
+
+1. Clone este repositório para a sua máquina:
+
+   ```bash
+   git clone https://github.com/EmanuelBitenc/ChuckNorris_Page.git
+   ```
+
+2. Navegue até o diretório do projeto:
+
+   ```bash
+   cd chuck-norris-jokes
+   ```
+
+3. Instale as dependências:
+
+   ```bash
+   npm install
+   ```
+
+4. Inicie o servidor de desenvolvimento:
+
+   ```bash
+   npm start
+   ```
+
+5. Acesse o projeto no seu navegador em [http://localhost:3000](http://localhost:3000).
+
+</details>
 
 ## Interface Visual
 
@@ -31,23 +63,3 @@ Dentro da pasta src podemos encontrar:
 - Pasta `components` , responsavel por agrupar os componentes do projeto.
 - `header.js` , contem o código do cabeçario da pagina.
 - `page.js` , contem o código do restante da pagina, junto com o código que consume a api e trabalha com ela.
-
-<details><summary><b>Create React App</summary>
-
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-</details>
