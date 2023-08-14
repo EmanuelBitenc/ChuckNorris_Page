@@ -2,6 +2,9 @@
 
 Bem-vindo à Página de Piadas do Chuck Norris! Desenvolvida a partir da api Chuck Norris Jokes.
 
+![localhost_3000_ (1)](https://github.com/EmanuelBitenc/ChuckNorris_Page/assets/63247451/9746a5d1-1390-4534-b8fd-d2abb374d695)
+
+
 ## Interface Visual
 
 Pagina desenvolvida usando React junto do Chakra UI para a criação de um design moderno e elegante.
